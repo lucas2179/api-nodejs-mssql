@@ -1,7 +1,7 @@
-var app = require('./config/express');
+const app = require('./config/express')();
+const port = app.get('port');
 
-var port = process.env.PORT || 3000;
-    
-app.listen(port, function(){
-    console.log('Server ON in Port' + port);
-})
+// RODANDO NOSSA APLICAÇÃO NA PORTA SETADA
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`)
+});
