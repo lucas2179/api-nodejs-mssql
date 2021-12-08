@@ -3,5 +3,5 @@ const port = app.get('port');
 
 // RODANDO NOSSA APLICAÇÃO NA PORTA SETADA
 app.listen(port, () => {
-  console.log(`Server ON in Port ${port}`)
+  console.log(`Server ON running on Port ${port}`)
 });
