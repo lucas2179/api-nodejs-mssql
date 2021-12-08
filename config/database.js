@@ -1,14 +1,13 @@
 const sql = require('mssql')
 
-//'mssql://username:password@localhost/database'
 //Following example:
-//const config = 'mssql://admin.camara:Welcome1@mvpdb.database.windows.net/db?encrypt=true&';
+//const config = 'mssql://database-user:password@server-name/db?encrypt=true&';
 
 const config = {
-  user: 'admin.camara',
-  password: 'Welcome1',
-  server: 'mvpdb.database.windows.net',
-  database: 'db',
+  user: process.env.DATABASE_USER,
+  password: process.env.DATABASE_PWS,
+  server: process.env.SERVER_NAME,
+  database: process.env.DATABASE_NAME,
   requestTimeout: 180000, // for timeout setting
   connectionTimeout: 180000, // for timeout setting
     "options": {
