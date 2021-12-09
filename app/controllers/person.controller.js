@@ -35,8 +35,22 @@ exports.delete = async (req, res) => {
     }
 }
 
-
 exports.readById = async(req, res) => {
     const person = await Person.readById(req.params.id)
-    res.status(200).send(person)
+    
+    function randomError() {
+        return Math.floor(Math.random() * 3);
+    }
+
+    var error = randomError();
+    console.log(`Error: ${error}`)
+
+    if ( error == 0 ) {
+        console.log(`condition is zero: ${error}`)
+        res.status(500).send({ message: 'Error.' });
+        
+    } else {
+        console.log(`condition is not zero: ${error}`)
+        res.status(200).send(person);
+    }
 }
