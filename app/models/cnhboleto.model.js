@@ -1,6 +1,6 @@
 const { poolPromise } = require('../../config/database')
 
-exports.getBoleto = async(cpf,data,valor) =>{
+exports.getBoleto = async(cpf) =>{
     const pool = await poolPromise;
     const rs = await pool
             .request()
