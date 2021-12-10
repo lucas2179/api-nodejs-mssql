@@ -11,9 +11,9 @@ const config = {
   requestTimeout: 180000, // for timeout setting
   connectionTimeout: 180000, // for timeout setting
     "options": {
-      "encrypt": true, // need to stop ssl checking in case of local db
-      "enableArithAbort": true
-      }
+      "enableArithAbort": true,
+      "port": 1433
+    }
 }
 
 
