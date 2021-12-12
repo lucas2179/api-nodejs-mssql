@@ -8,11 +8,16 @@ const config = {
   password: process.env.DATABASE_PWS,
   server: process.env.SERVER_NAME,
   database: process.env.DATABASE_NAME,
-  requestTimeout: 180000, // for timeout setting
-  connectionTimeout: 180000, // for timeout setting
+  //requestTimeout: 180000, // for timeout setting
+  //connectionTimeout: 180000, // for timeout setting
+  port: 1433,
+  pool:{
+    idleTimeoutMillis: 60000
+  },
+  requestTimeout : 60000,
     "options": {
       //"enableArithAbort": true,
-      "port": 1433
+      //"port": 1433
     }
 }
 
