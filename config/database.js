@@ -11,7 +11,7 @@ const config = {
   requestTimeout: 180000, // for timeout setting
   connectionTimeout: 180000, // for timeout setting
     "options": {
-      "enableArithAbort": true,
+      //"enableArithAbort": true,
       "port": 1433
     }
 }

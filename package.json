@@ -10,13 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.19.1",
     "consign": "^0.1.6",
-    "config": "3.2.3",
+    "config": "3.3.6",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mssql": "^6.3.1",
+    "mssql": "^7.3.0",
     "path": "^0.12.7",
-    "util": "^0.12.3"
+    "util": "^0.12.4"
   }
 }
