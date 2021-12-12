@@ -4,21 +4,22 @@ const sql = require('mssql')
 //const config = 'mssql://database-user:password@server-name/db?encrypt=true&';
 
 const config = {
-  user: process.env.DATABASE_USER,
-  password: process.env.DATABASE_PWS,
   server: process.env.SERVER_NAME,
   database: process.env.DATABASE_NAME,
-  //requestTimeout: 180000, // for timeout setting
-  //connectionTimeout: 180000, // for timeout setting
+  user: process.env.DATABASE_USER,
+  password: process.env.DATABASE_PWS,
   port: 1433,
-  pool:{
-    idleTimeoutMillis: 60000
+  "connectionTimeout": 300000,
+  "requestTimeout": 300000,
+  "pool": {
+      "max": 300,
+      "min": 0,
+      "idleTimeoutMillis": 30000
   },
-  requestTimeout : 60000,
-    "options": {
-      //"enableArithAbort": true,
-      //"port": 1433
-    }
+  "options": {
+      "encrypt": true,
+      "enableArithAbort": true
+  },
 }
 
 
